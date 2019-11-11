@@ -15,4 +15,9 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+//= require schools
+
 console.log('Hello World from Webpacker')

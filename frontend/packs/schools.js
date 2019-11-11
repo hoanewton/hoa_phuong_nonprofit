@@ -1,0 +1,1 @@
+alert('schools.js is loaded');
