@@ -17,7 +17,7 @@ require("channels")
 import 'bootstrap'
 import '../stylesheets/application'
 
-require("schools")
+import './nav'
 
 document.addEventListener("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip()

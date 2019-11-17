@@ -1,1 +1,0 @@
-console.log("schools/index.js is now LOADED");
