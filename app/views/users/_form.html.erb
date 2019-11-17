@@ -1,47 +1,50 @@
+
 <%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <fieldset class="form-group">
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> Lỗi không lưu được do:</h2>
 
-      <ul>
-        <% user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <%= form.text_field :email, class: "form-control" %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+    <div class="form-group">
+      <label for="full_name">Họ Tên</label>
+      <%= form.text_field :full_name, class: "form-control"  %>
+    </div>
 
-  <div class="field">
-    <%= form.label :full_name %>
-    <%= form.text_field :full_name %>
-  </div>
+    <div class="form-group">
+      <label for="phone">Điện Thoại</label>
+      <%= form.text_field :phone, class: "form-control"  %>
+    </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
-  </div>
+    <div class="form-group">
+      <label for="address">Địa Chỉ</label>
+      <%= form.text_field :address, class: "form-control"  %>
+    </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
+    <div class="form-group">
+      <label for="type">Vai Trò</label>
+      <%= form.text_field :type, class: "form-control"  %>
+    </div>
 
-  <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type %>
-  </div>
+    <div class="form-group">
+      <label for="admin_note">Ghi Chú Về Thành Viên</label>
+      <%= form.text_area :admin_note, class: "form-control"  %>
+    </div>
+  </fieldset>
 
-  <div class="field">
-    <%= form.label :admin_note %>
-    <%= form.text_area :admin_note %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions form-group-btns">
+    <%= form.submit class: "btn btn-primary"%>
   </div>
 <% end %>

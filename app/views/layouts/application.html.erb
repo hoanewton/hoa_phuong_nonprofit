@@ -47,10 +47,12 @@
         </ul>
       </div>
     </nav>
-    <% if notice || alert %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p class="alert-success"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert-danger"><%= alert %></p>
     <% end %>
+
     <%= yield %>
   </body>
 </html>
