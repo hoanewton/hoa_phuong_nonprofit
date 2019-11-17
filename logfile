@@ -3,3 +3,4 @@
 2019-11-11 19:48:55.570 EST [4994] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2019-11-11 19:48:55.582 EST [4995] LOG:  database system was shut down at 2019-11-11 19:48:45 EST
 2019-11-11 19:48:55.588 EST [4994] LOG:  database system is ready to accept connections
+2019-11-17 14:23:16.709 EST [44516] FATAL:  database "hoa_phuong_development" does not exist

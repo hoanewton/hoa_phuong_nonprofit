@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :phone
       t.string :address
       t.string :type
+      t.string :hashed_password
       t.text :admin_note
 
       t.timestamps

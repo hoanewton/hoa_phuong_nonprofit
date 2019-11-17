@@ -42,11 +42,11 @@
             <a class="nav-link dropdown-toggle" id='nav-users' data-toggle="dropdown" href="<%= users_path %>" role="button" aria-haspopup="true" aria-expanded="false">THÀNH VIÊN</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="<%= users_path %>">TẤT CẢ</a>
-              <% if user_signed_in? %>
-                <%= link_to 'ĐĂNG XUẤT', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
-              <% else %>
-                <%= link_to 'ĐĂNG NHẬP', new_user_session_path, class: 'dropdown-item' %>
-              <% end %>
+              <%# if current_user.present? %>
+                <%#= link_to 'ĐĂNG XUẤT', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+              <%# else %>
+                <%#= link_to 'ĐĂNG NHẬP', new_user_session_path, class: 'dropdown-item' %>
+              <%# end %>
             </div>
           </li>
           <li class="nav-item">
