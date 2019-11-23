@@ -23,6 +23,16 @@
     </div>
 
     <div class="form-group">
+      <label for="email">Mật Khẩu</label>
+      <%= form.password_field :password, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Xác Nhận Mật Khẩu</label>
+      <%= form.password_field :password_confirmation, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
       <label for="phone">Điện Thoại</label>
       <%= form.text_field :phone, class: "form-control"  %>
     </div>
