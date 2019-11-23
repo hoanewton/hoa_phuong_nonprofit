@@ -1,17 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: MyText
   email: MyString
-  full_name: MyString
+  password_digest: MyText
   phone: MyString
-  address: MyString
-  type: 
+  address: MyText
+  role: MyString
   admin_note: MyText
 
 two:
+  name: MyText
   email: MyString
-  full_name: MyString
+  password_digest: MyText
   phone: MyString
-  address: MyString
-  type: 
+  address: MyText
+  role: MyString
   admin_note: MyText

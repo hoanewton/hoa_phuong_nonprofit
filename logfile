@@ -4,3 +4,10 @@
 2019-11-11 19:48:55.582 EST [4995] LOG:  database system was shut down at 2019-11-11 19:48:45 EST
 2019-11-11 19:48:55.588 EST [4994] LOG:  database system is ready to accept connections
 2019-11-17 14:23:16.709 EST [44516] FATAL:  database "hoa_phuong_development" does not exist
+2019-11-19 20:21:34.368 EST [47399] ERROR:  column users.email does not exist at character 36
+2019-11-19 20:21:34.368 EST [47399] STATEMENT:  SELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2
+2019-11-22 18:08:34.633 EST [51769] ERROR:  database "hoa_phuong_development" already exists
+2019-11-22 18:08:34.633 EST [51769] STATEMENT:  CREATE DATABASE "hoa_phuong_development" ENCODING = 'unicode'
+2019-11-22 18:08:34.646 EST [51777] ERROR:  database "hoa_phuong_test" already exists
+2019-11-22 18:08:34.646 EST [51777] STATEMENT:  CREATE DATABASE "hoa_phuong_test" ENCODING = 'unicode'
+2019-11-22 18:09:03.078 EST [51878] FATAL:  database "macbook" does not exist

@@ -1,8 +1,5 @@
-<div class='container'>
-  <div class="row">
-    <div class="col-8 offset-2">
-      <h1>Thành Viên Mới</h1>
-      <%= render 'form', user: @user %>
-    </div>
-  </div>
-</div>
+<h1>New User</h1>
+
+<%= render 'form', user: @user %>
+
+<%= link_to 'Back', users_path %>
