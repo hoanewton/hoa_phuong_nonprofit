@@ -1,0 +1,37 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h4 class="mb-0">Đăng Nhập</h4>
+    <h1>Xin Chào</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-xl-5">
+      <fieldset class="form-group">
+        <%= form_tag sessions_path do %>
+          <div class="form-group">
+            <%= email_field_tag :email, @email, placeholder: 'Email Address', class: "form-control form-control-lg" %>
+          </div>
+
+          <div class="form-group">
+            <%= password_field_tag :password, nil, placeholder: "Mật Khẩu", class: "form-control form-control-lg" %>
+          </div>
+
+          <div class="form-group form-group-btns">
+          <%#= link_to "Quên Mật Khẩu?", new_password_reset_path, class: "btn btn-lg btn-link" %>
+          <%= submit_tag "Đăng Nhập", class: "btn btn-lg btn-primary" %>
+          </div>
+        <% end %>
+      </fieldset>
+    </div>
+
+    <div class="col-md-6 offset-xl-1">
+      <div class="well well-faded-grey">
+        <h4>Chưa Đăng Kí Thành Viên?</h4>
+        <%= link_to "Đăng Kí", new_user_path, class: 'btn btn-lg btn-orange' %>
+      </div>
+    </div>
+  </div>
+</div>
+

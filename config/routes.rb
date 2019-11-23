@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :schools
   
   # Sessions
-  # get '/login', to: 'sessions#new'
-  # post '/sessions', to: 'sessions#create'
-  # delete '/logout', to: 'sessions#destroy'
+  get '/login', to: 'sessions#new'
+  post '/sessions', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 end
