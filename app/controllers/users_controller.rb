@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :login_required, only: [:show, :edit, :update, :destroy]
   before_action :authorize_admin, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_self, only: [:show, :edit, :update, :destroy]
 
   attr_accessor :password, :password_confirmation
 
@@ -83,10 +82,10 @@ class UsersController < ApplicationController
     end
 
     def authorize_admin
-      head :unauthorized unless admin_user?
+      unless admin_user? || current_user = @user
+        flash[:danger] = 'Not Authorized'
+        redirect_to login_path 
+      end
     end
 
-    def authorize_self
-      head :unauthorized unless @user != current_user
-    end
 end

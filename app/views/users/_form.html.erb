@@ -49,6 +49,11 @@
       </div>
 
       <div class="form-group">
+        <label for="school">Điểm Trường</label>
+        <%= form.collection_select(:school, School.all, :id, :name, :prompt => 'Trường', allow_blank: true) %>
+      </div>
+
+      <div class="form-group">
         <label for="admin_note">Ghi Chú Về Thành Viên</label>
         <%= form.text_area :admin_note, class: "form-control"  %>
       </div>
