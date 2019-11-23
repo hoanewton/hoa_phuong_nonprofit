@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :login_required
-  before_action :authorize_admin
-  before_action :authorize_self
+  before_action :login_required, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_admin, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_self, only: [:show, :edit, :update, :destroy]
 
   attr_accessor :password, :password_confirmation
 
@@ -83,7 +83,7 @@ class UsersController < ApplicationController
     end
 
     def authorize_admin
-      head :unauthorized unless admin?
+      head :unauthorized unless admin_user?
     end
 
     def authorize_self
