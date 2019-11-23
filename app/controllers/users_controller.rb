@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :login_required
+  before_action :authorize_admin
+  before_action :authorize_self
+
   attr_accessor :password, :password_confirmation
 
   # GET /users
@@ -72,5 +76,17 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation, :phone, :address, :role, :admin_note)
+    end
+
+    def login_required
+      redirect_to login_path if current_user.nil?
+    end
+
+    def authorize_admin
+      head :unauthorized unless admin?
+    end
+
+    def authorize_self
+      head :unauthorized unless @user != current_user
     end
 end
