@@ -7,3 +7,13 @@
   background-repeat: no-repeat;
   color: white;
 }
+
+hr {
+  margin-top: $hr-margin-y;
+  margin-bottom: subtract_px_from_rem($hr-margin-y, $hr-border-width);
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+  &.spacer {
+    border-color: transparent;
+  }
+}

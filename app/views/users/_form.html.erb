@@ -12,55 +12,94 @@
       </div>
     <% end %>
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <%= form.text_field :email, class: "form-control" %>
+    <div class="form-group row">
+      <div class="offset-2 col-3">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-5">
+        <%= form.text_field :email, class: "form-control" %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="name">Họ Tên</label>
-      <%= form.text_field :name, class: "form-control"  %>
+    <div class="form-group row">
+      <div class="offset-2 col-3">
+        <label for="name">Họ Tên</label>
+      </div>
+      <div class="col-5">
+        <%= form.text_field :name, class: "form-control"  %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="email">Mật Khẩu</label>
-      <%= form.password_field :password, class: "form-control" %>
+    <div class="form-group row">
+        <div class="offset-2 col-3">
+        <label for="email">Mật Khẩu</label>
+      </div>
+      <div class="col-5">
+        <%= form.password_field :password, class: "form-control" %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="email">Xác Nhận Mật Khẩu</label>
-      <%= form.password_field :password_confirmation, class: "form-control" %>
+    <div class="form-group row">
+        <div class="offset-2 col-3">
+        <label for="email">Xác Nhận Mật Khẩu</label>
+      </div>
+      <div class="col-5">
+        <%= form.password_field :password_confirmation, class: "form-control" %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="phone">Điện Thoại</label>
-      <%= form.text_field :phone, class: "form-control"  %>
+    <div class="form-group row">
+        <div class="offset-2 col-3">
+        <label for="phone">Điện Thoại</label>
+      </div>
+      <div class="col-5">
+        <%= form.text_field :phone, class: "form-control"  %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="address">Địa Chỉ</label>
-      <%= form.text_field :address, class: "form-control"  %>
+    <div class="form-group row">
+        <div class="offset-2 col-3">
+        <label for="address">Địa Chỉ</label>
+      </div>
+      <div class="col-5">
+        <%= form.text_field :address, class: "form-control"  %>
+      </div>
     </div>
 
     <% if admin_user? %>
-      <div class="form-group">
-        <label for="role">Vai Trò</label>
-        <%= form.select(:role, role_options, {}, { :class => "custom-select" }) %>
+      <div class="form-group row">
+        <div class="offset-2 col-3">
+          <label for="role">Vai Trò</label>
+        </div>
+        <div class="col-5">
+          <%= form.select(:role, role_options, {}, { :class => "custom-select" }) %>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="school">Điểm Trường</label>
-        <%= form.collection_select(:school, School.all, :id, :name, :prompt => 'Trường', allow_blank: true) %>
+      <div class="form-group row">
+        <div class="offset-2 col-3">
+          <label for="school">Điểm Trường</label>
+        </div>
+        <div class="col-5">
+          <%= form.collection_select(:school, School.all, :id, :name, :prompt => 'Trường', allow_blank: true) %>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="admin_note">Ghi Chú Về Thành Viên</label>
-        <%= form.text_area :admin_note, class: "form-control"  %>
+      <div class="form-group row">
+        <div class="offset-2 col-3">
+          <label for="admin_note">Ghi Chú Về Thành Viên</label>
+        </div>
+        <div class="col-5">
+          <%= form.text_area :admin_note, class: "form-control"  %>
+        </div>
       </div>
     <% end %>
   </fieldset>
 
-  <div class="actions form-group-btns">
-    <%= form.submit 'Tạo Thành Viên', class: 'btn-primary p-2' %>
+  <div class="actions form-group-btns row">
+    <div class="offset-2 col-4">
+      <%= form.submit 'Lưu', class: 'btn-primary btn-block p-2 rounded-sm' %>
+    </div>
+
   </div>
 <% end %>
