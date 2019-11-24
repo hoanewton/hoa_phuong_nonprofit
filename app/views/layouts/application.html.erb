@@ -23,16 +23,20 @@
           <li class="nav-item dropdown pr-3">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<%= schools_path %>" role="button" aria-haspopup="true" aria-expanded="false">XÂY TRƯỜNG</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">ĐIỂM TRƯỜNG ĐÃ HOÀN THÀNH</a>
-              <a class="dropdown-item" href="#">ĐIỂM TRƯỜNG MỚI</a>
+              <a class="dropdown-item" href="#">Điểm Trường Đã Xây</a>
+              <a class="dropdown-item" href="#">Điểm Trường Mới</a>
+              <% if admin_user? %>
+                <div class="dropdown-divider"></div>
+                <%= link_to 'Tạo Trường Mới', new_school_path, class: "dropdown-item" %>
+              <% end %>
             </div>
           </li>
           <li class="nav-item dropdown pr-3">
             <a class="nav-link dropdown-toggle" id="nav-lunch-projects" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">NUÔI EM</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">ĐIỂM TRƯỜNG ĐÃ NHẬN</a>
-              <a class="dropdown-item" href="#">ĐIỂM TRƯỜNG TIẾP THEO</a>
-              <a class="dropdown-item" href="#">CẬP NHẬT THÔNG TIN QUÝ</a>
+              <a class="dropdown-item" href="#">Điểm Trường Đã Nhận</a>
+              <a class="dropdown-item" href="#">Điểm Trường Cần Trợ Giúp</a>
+              <a class="dropdown-item" href="#">Cập Nhật Hàng Quý</a>
             </div>
           </li>
           <li class="nav-item pr-3">

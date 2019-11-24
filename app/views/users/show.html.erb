@@ -1,38 +1,77 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Tên:</strong>
-  <%= @user.name %>
-</p>
+<div class="container">
+  <h1>Chi Tiết Về Thành Viên</h1>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <hr class="spacer">
 
-<p>
-  <strong>Điện Thoại:</strong>
-  <%= @user.phone %>
-</p>
+  <div class="row mb-2">
+    <div class="offset-2 col-2">
+      Tên:
+    </div>
+    <div class="col-6">
+      <%= @user.name %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="offset-2 col-2">
+      Email:
+    </div>
+    <div class="col-6">
+      <%= @user.email %>
+    </div>
+  </div>
 
-<p>
-  <strong>Địa Chỉ:</strong>
-  <%= @user.address %>
-</p>
+  <div class="row mb-2">
+    <div class="offset-2 col-2">
+      Điện Thoại:
+    </div>
+    <div class="col-6">
+      <%= @user.phone %>
+    </div>
+  </div>
 
-<p>
-  <strong>Điểm Trường:</strong>
-  <%= @user&.school&.name %>
-</p>
+  <div class="row mb-2">
+    <div class="offset-2 col-2">
+      Địa Chỉ:
+    </div>
+    <div class="col-6">
+      <%= @user.address %>
+    </div>
+  </div>
 
-<p>
-  <strong>Vai Trò:</strong>
-  <%= @user.role %>
-</p>
+  <div class="row mb-2">
+    <div class="offset-2 col-2">
+      Điểm Trường:
+    </div>
+    <div class="col-6">
+      <%= @user&.school&.name %>
+    </div>
+  </div>
 
-<p>
-  <strong>Ghi Chú:</strong>
-  <%= @user.admin_note %>
-</p>
+  <div class="row mb-2">
+    <div class="offset-2 col-2">
+      Vai Trò:
+    </div>
+    <div class="col-6">
+      <%= @user.role %>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %>
+  <div class="row mb-2">
+    <div class="offset-2 col-2">
+      Ghi Chú:
+    </div>
+    <div class="col-6">
+      <%= @user.admin_note %>
+    </div>
+  </div>
+
+  <hr class="spacer">
+
+  <div class="row mb-2">
+    <div class= offset-2>
+      <%= link_to 'Sửa', edit_user_path(@user) %>
+    </div>
+  </div>
+</div>
