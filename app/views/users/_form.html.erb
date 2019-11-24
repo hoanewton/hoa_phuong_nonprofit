@@ -81,7 +81,7 @@
           <label for="school">Điểm Trường</label>
         </div>
         <div class="col-5">
-          <%= form.collection_select(:school, School.all, :id, :name, :prompt => 'Trường', allow_blank: true) %>
+          <%= form.collection_select(:school, School.all, :id, :name, { :prompt => 'Điểm Trường', allow_blank: true, include_blank: true }, { class: 'custom-select'}) %>
         </div>
       </div>
 
