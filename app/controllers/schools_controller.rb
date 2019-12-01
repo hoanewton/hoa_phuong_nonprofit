@@ -4,7 +4,7 @@ class SchoolsController < ApplicationController
   # GET /schools
   # GET /schools.json
   def index
-    @schools = School.all
+    @schools = School.all.order('updated_at DESC')
   end
 
   # GET /schools/1
@@ -69,6 +69,6 @@ class SchoolsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def school_params
-      params.require(:school).permit(:name, :description, :contact, :address, :admin_note)
+      params.require(:school).permit(:name, :description, :contact, :address, :status, :admin_note)
     end
 end

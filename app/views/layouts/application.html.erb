@@ -27,6 +27,7 @@
               <a class="dropdown-item" href="#">Điểm Trường Mới</a>
               <% if admin_user? %>
                 <div class="dropdown-divider"></div>
+                <%= link_to 'Tất cả Điểm Trường', schools_path, class: "dropdown-item" %>
                 <%= link_to 'Tạo Trường Mới', new_school_path, class: "dropdown-item" %>
               <% end %>
             </div>

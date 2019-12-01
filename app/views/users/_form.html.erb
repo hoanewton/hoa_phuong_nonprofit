@@ -23,7 +23,7 @@
 
     <div class="form-group row">
       <div class="offset-2 col-3">
-        <label for="name">Họ Tên</label>
+        <label for="name">Họ tên</label>
       </div>
       <div class="col-5">
         <%= form.text_field :name, class: "form-control"  %>
@@ -32,7 +32,7 @@
 
     <div class="form-group row">
         <div class="offset-2 col-3">
-        <label for="email">Mật Khẩu</label>
+        <label for="email">Mật khẩu</label>
       </div>
       <div class="col-5">
         <%= form.password_field :password, class: "form-control" %>
@@ -41,7 +41,7 @@
 
     <div class="form-group row">
         <div class="offset-2 col-3">
-        <label for="email">Xác Nhận Mật Khẩu</label>
+        <label for="email">Xác nhận mật khẩu</label>
       </div>
       <div class="col-5">
         <%= form.password_field :password_confirmation, class: "form-control" %>
@@ -50,7 +50,7 @@
 
     <div class="form-group row">
         <div class="offset-2 col-3">
-        <label for="phone">Điện Thoại</label>
+        <label for="phone">Điện thoại</label>
       </div>
       <div class="col-5">
         <%= form.text_field :phone, class: "form-control"  %>
@@ -59,7 +59,7 @@
 
     <div class="form-group row">
         <div class="offset-2 col-3">
-        <label for="address">Địa Chỉ</label>
+        <label for="address">Địa chỉ</label>
       </div>
       <div class="col-5">
         <%= form.text_area :address, class: "form-control"  %>
@@ -78,7 +78,7 @@
 
       <div class="form-group row">
         <div class="offset-2 col-3">
-          <label for="school">Điểm Trường</label>
+          <label for="school">Điểm trường</label>
         </div>
         <div class="col-5">
           <%= form.collection_select(:school_id, School.all, :id, :name, { :prompt => 'Điểm Trường', allow_blank: true, include_blank: true }, { class: 'custom-select'}) %>
@@ -87,7 +87,7 @@
 
       <div class="form-group row">
         <div class="offset-2 col-3">
-          <label for="admin_note">Ghi Chú Về Thành Viên</label>
+          <label for="admin_note">Ghi chú</label>
         </div>
         <div class="col-5">
           <%= form.text_area :admin_note, class: "form-control"  %>

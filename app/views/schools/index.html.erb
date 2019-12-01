@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
 
-  <h1>Điểm Trường</h1>
+  <h1>Tất Cả Điểm Trường</h1>
 
   <table class="table">
     <thead>
@@ -10,22 +10,22 @@
         <th scope="col">Mô tả</th>
         <th scope="col">Liên Hệ</th>
         <th scope="col">Địa Chỉ</th>
-        <th scope="col">Ghi </th>
+        <th scope="col">Ghi Chú</th>
         <th scope="col">---</th>
       </tr>
     </thead>
 
     <tbody>
       <% @schools.each do |school| %>
-        <tr>
+        <tr class="<%= school_table_class(school) %>">
           <td><%= school.name %></td>
           <td><%= school.description %></td>
           <td><%= school.contact %></td>
           <td><%= school.address %></td>
           <td><%= school.admin_note %></td>
-          <td><%= link_to 'Show', school %></td>
-          <td><%= link_to 'Edit', edit_school_path(school) %></td>
-          <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Xem', school %></td>
+          <td><%= link_to 'Sửa', edit_school_path(school) %></td>
+          <td><%= link_to 'Xoá', school, method: :delete, data: { confirm: 'Bạn Chắc Không?' } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -33,5 +33,5 @@
 
   <br>
 
-  <%= link_to 'New School', new_school_path %>
+  <%= link_to 'Tạo Trường Mới', new_school_path %>
 </div>
