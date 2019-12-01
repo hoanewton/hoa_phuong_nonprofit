@@ -4,7 +4,11 @@ class SchoolsController < ApplicationController
   # GET /schools
   # GET /schools.json
   def index
-    @schools = School.all.order('updated_at DESC')
+    if params[:status].present?
+      @schools = School.send(params[:status]).order('created_at DESC')
+    else
+      @schools = School.all.order('updated_at DESC')
+    end
   end
 
   # GET /schools/1

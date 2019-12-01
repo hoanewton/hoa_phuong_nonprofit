@@ -17,14 +17,11 @@
       </a>
       <div class='collapse topnav navbar-collapse cl-effect-14 c'>
         <ul class='navbar-nav ml-auto'>
-          <li class="nav-item pr-3">
-            <a class="nav-link" href="#">VỀ CHÚNG TÔI</a>
-          </li>
           <li class="nav-item dropdown pr-3">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<%= schools_path %>" role="button" aria-haspopup="true" aria-expanded="false">XÂY TRƯỜNG</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Điểm Trường Đã Xây</a>
-              <a class="dropdown-item" href="#">Điểm Trường Mới</a>
+              <%= link_to 'Điểm Trường Đang Gây Quỹ', schools_path(status: :fund_raising), class: "dropdown-item" %>
+              <%= link_to 'Điểm Trường Đã Xây', schools_path(status: :built), class: "dropdown-item" %>
               <% if admin_user? %>
                 <div class="dropdown-divider"></div>
                 <%= link_to 'Tất cả Điểm Trường', schools_path, class: "dropdown-item" %>
@@ -69,4 +66,35 @@
 
     <%= yield %>
   </body>
+
+  <footer class="clearfix bg-white py-3 py-xl-5 mt-3 mt-xl-5 border-top site-footer ">
+
+  <div class="container mb-5">
+    <div class="row">
+      <nav class="nav nav-social justify-content-center mx-auto align-items-center align-self-lg-start justify-content-lg-start ml-lg-0">
+        <span class="small nav-link">Follow Us</span>
+        <a href="https://www.facebook.com/hoa.blue.3" target="_blank" class="nav-link" rel="noopener">
+          sometext
+          <i class="icon-facebook"></i><span class="sr-only">Thiện Nguyện Hoa Phượng Facebook</span>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="nav-link" rel="noopener">
+          twitter
+          <i class="icon-twitter"></i><span class="sr-only">@TNHoaPhuong on Twitter</span>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="nav-link" rel="noopener">
+          instagram
+          <i class="icon-instagram"></i><span class="sr-only">@tnhoaphuong on Instagram</span>
+        </a>
+      </nav>
+
+      <div class="align-self-center mx-auto align-self-lg-end mr-lg-0">
+        <p class="small text-center text-lg-right">
+          Copyright &#169; 2019 Thiện Nguyện Hoa Phượng.
+          <img src="<%= asset_path('hoa_phuong_logo.jpg') %>" width='80' height='auto' class='d-inline-block img-fluid top-logo'>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</footer>
 </html>
