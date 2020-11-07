@@ -18,6 +18,12 @@ import 'bootstrap'
 import '../stylesheets/application'
 
 import './nav'
+import './jquery.min.js'
+import './jquery_scrollex.min.js'
+import './jquery_scrolly.min.js'
+import './main'
+import './skel.min.js'
+import './util'
 
 document.addEventListener("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip()
